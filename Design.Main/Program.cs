@@ -7,14 +7,14 @@ namespace Design.Main
     {
         static void Main(string[] args)
         {
-            SimpleFactoryPatternMethods();
+            FactoryPatternMethods();
             Console.ReadKey();
         }
 
         /// <summary>
-        /// 简单工厂方法
+        /// 工厂方法模式
         /// </summary>
-        public static void SimpleFactoryPatternMethods()
+        public static void FactoryPatternMethods()
         {
             var apple = FruitFactory.CreateInstance("Apple");
             var banana = FruitFactory.CreateInstance("Banana");
