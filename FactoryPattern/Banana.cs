@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SimpleFactoryPattern
+namespace FactoryPattern
 {
     /// <summary>
     /// 继承IGoods，方便转化

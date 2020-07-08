@@ -1,5 +1,5 @@
 ﻿using System;
-using SimpleFactoryPattern;
+using FactoryPattern;
 
 namespace Design.Main
 {

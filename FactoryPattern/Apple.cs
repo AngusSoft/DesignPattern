@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleFactoryPattern
+namespace FactoryPattern
 {
     /// <summary>
     /// 继IGoods，方便转化
