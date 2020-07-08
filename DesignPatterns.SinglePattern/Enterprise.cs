@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPatterns.SinglePattern
+namespace SinglePattern
 {
     public class Enterprise
     {

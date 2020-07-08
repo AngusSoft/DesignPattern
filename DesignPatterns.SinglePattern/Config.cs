@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns.SinglePattern
+namespace SinglePattern
 {
     /// <summary>
     /// 静态类，优先加载
