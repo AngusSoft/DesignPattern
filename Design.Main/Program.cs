@@ -1,6 +1,7 @@
 ﻿using System;
 using FactoryPattern;
 using AbstructFactoryPattern;
+using BuilderPattern;
 
 namespace Design.Main
 {
@@ -11,7 +12,12 @@ namespace Design.Main
             //工厂方法模式
             //FactoryPatternMethods(); 
 
-            AbstructFactoryPatternMethods();
+            //抽象工厂模式
+            //AbstructFactoryPatternMethods();
+
+            //建造者模式
+            BuilderPatternMethods();
+
             Console.ReadKey();
         }
 
@@ -44,6 +50,22 @@ namespace Design.Main
             Console.WriteLine($"广州苹果的单价：{gzApple.GetPrice()}，包装形状：{gzApple.GetPackageShape()}");
             var gzBanana = gzFactory.GetBanana();
             Console.WriteLine($"广州香蕉的单价：{gzBanana.GetPrice()}， 包装形状：{gzBanana.GetPackageShape()}");
+        }
+
+        /// <summary>
+        /// 建造者模式
+        /// </summary>
+        public static void BuilderPatternMethods()
+        {
+            var director = new Director();
+
+            var bjBuilder = new BJBuilder();
+            director.Construct(bjBuilder);
+            bjBuilder.GetCake().Show();
+
+            var gzBuilder = new GZBuilder();
+            director.Construct(gzBuilder);
+            gzBuilder.GetCake().Show();
         }
     }
 }
