@@ -3,6 +3,7 @@ using FactoryPattern;
 using AbstructFactoryPattern;
 using BuilderPattern;
 using ProtoTypePattern;
+using AdapterPattern;
 
 namespace Design.Main
 {
@@ -20,8 +21,10 @@ namespace Design.Main
             //BuilderPatternMethods();
 
             //原型模式
-            ProtoTypePatternMethods();
+            //ProtoTypePatternMethods();
 
+            //适配器模式
+            AdapterPattern();
             Console.ReadKey();
         }
 
@@ -90,6 +93,15 @@ namespace Design.Main
 
             Console.WriteLine($"我是{concreteType2.Id}我属于{concreteType2.AllowTree.Name}");
 
+        }
+
+        /// <summary>
+        /// 适配器模式
+        /// </summary>
+        public static void AdapterPattern()
+        {
+            INikeShoesAdapter nikeShoes = new NikeShoesAdapter();
+            nikeShoes.Nike();
         }
     }
 }

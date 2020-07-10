@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AbstructFactoryPattern\AbstructFactoryPattern.csproj" />
+    <ProjectReference Include="..\AdapterPattern\AdapterPattern.csproj" />
     <ProjectReference Include="..\BuilderPattern\BuilderPattern.csproj" />
     <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj" />
     <ProjectReference Include="..\ProtoTypePattern\ProtoTypePattern.csproj" />
