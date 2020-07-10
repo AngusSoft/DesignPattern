@@ -2,6 +2,7 @@
 using FactoryPattern;
 using AbstructFactoryPattern;
 using BuilderPattern;
+using ProtoTypePattern;
 
 namespace Design.Main
 {
@@ -16,7 +17,10 @@ namespace Design.Main
             //AbstructFactoryPatternMethods();
 
             //建造者模式
-            BuilderPatternMethods();
+            //BuilderPatternMethods();
+
+            //原型模式
+            ProtoTypePatternMethods();
 
             Console.ReadKey();
         }
@@ -66,6 +70,26 @@ namespace Design.Main
             var gzBuilder = new GZBuilder();
             director.Construct(gzBuilder);
             gzBuilder.GetCake().Show();
+        }
+
+        /// <summary>
+        /// 原型模式
+        /// </summary>
+        public static void ProtoTypePatternMethods()
+        {
+            var concreteType = new ConcreteProtoType("苹果A", new Tree
+            {
+                Name = "苹果树S"
+            });
+
+            ///注意：复杂类型，克隆的是引用，一个改变会跟随另一个改变
+            ConcreteProtoType concreteType2 = (ConcreteProtoType)concreteType.Clone();
+            concreteType2.Id = "苹果B";
+
+            Console.WriteLine($"我是{concreteType.Id}我属于{concreteType.AllowTree.Name}");
+
+            Console.WriteLine($"我是{concreteType2.Id}我属于{concreteType2.AllowTree.Name}");
+
         }
     }
 }
