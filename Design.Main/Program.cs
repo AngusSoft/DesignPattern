@@ -4,6 +4,7 @@ using AbstructFactoryPattern;
 using BuilderPattern;
 using ProtoTypePattern;
 using AdapterPattern;
+using BridgePattern;
 
 namespace Design.Main
 {
@@ -24,7 +25,10 @@ namespace Design.Main
             //ProtoTypePatternMethods();
 
             //适配器模式
-            AdapterPattern();
+            //AdapterPattern();
+
+            //桥接模式
+            BridgePattern();
             Console.ReadKey();
         }
 
@@ -102,6 +106,28 @@ namespace Design.Main
         {
             INikeShoesAdapter nikeShoes = new NikeShoesAdapter();
             nikeShoes.Nike();
+        }
+
+        /// <summary>
+        /// 桥接模式
+        /// </summary>
+        public static void BridgePattern()
+        {
+            //定义RAM类型
+            var ram64 = new RAM64();
+            //给桥接器定义其对手机型号
+            ram64.PhoneModel = new Mate40();
+            ram64.SetPhone();
+
+            ram64.PhoneModel = new P40();
+            ram64.SetPhone();
+
+            var ram128 = new RAM128();
+            ram128.PhoneModel = new Mate40();
+            ram128.SetPhone();
+
+            ram128.PhoneModel = new P40();
+            ram128.SetPhone();
         }
     }
 }
