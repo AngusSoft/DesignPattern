@@ -13,13 +13,7 @@ namespace BridgePattern
         /// <summary>
         /// 这个就相当于桥接器了
         /// </summary>
-        private IPhoneModel phoneModel;
-
-        public IPhoneModel PhoneModel
-        {
-            get { return phoneModel; }
-            set { phoneModel = value; }
-        }
+        public IPhoneModel PhoneModel { get; set; }
 
         /// <summary>
         /// 定义抽象方法，供不同的RAM扩展
