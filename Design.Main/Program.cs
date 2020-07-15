@@ -5,6 +5,7 @@ using BuilderPattern;
 using ProtoTypePattern;
 using AdapterPattern;
 using BridgePattern;
+using DecoratorPattern;
 
 namespace Design.Main
 {
@@ -25,10 +26,13 @@ namespace Design.Main
             //ProtoTypePatternMethods();
 
             //适配器模式
-            //AdapterPattern();
+            //AdapterPatternMethods();
 
             //桥接模式
-            BridgePattern();
+            //BridgePatternMethods();
+
+            //装饰者模式
+            DecoratorPatternMethods();
             Console.ReadKey();
         }
 
@@ -102,7 +106,7 @@ namespace Design.Main
         /// <summary>
         /// 适配器模式
         /// </summary>
-        public static void AdapterPattern()
+        public static void AdapterPatternMethods()
         {
             INikeShoesAdapter nikeShoes = new NikeShoesAdapter();
             nikeShoes.Nike();
@@ -111,7 +115,7 @@ namespace Design.Main
         /// <summary>
         /// 桥接模式
         /// </summary>
-        public static void BridgePattern()
+        public static void BridgePatternMethods()
         {
             //定义RAM类型
             var ram64 = new RAM64();
@@ -128,6 +132,17 @@ namespace Design.Main
 
             ram128.PhoneModel = new P40();
             ram128.SetPhone();
+        }
+
+        /// <summary>
+        /// 装饰者模式
+        /// </summary>
+        public static void DecoratorPatternMethods()
+        {
+            var noodles = new YouPoNoodles();
+            var egg = new Egg(noodles);
+            var lajiao = new LaJiao(egg);
+            lajiao.AddSomeThing();
         }
     }
 }
