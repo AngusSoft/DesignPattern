@@ -6,6 +6,7 @@ using ProtoTypePattern;
 using AdapterPattern;
 using BridgePattern;
 using DecoratorPattern;
+using CompositePattern;
 
 namespace Design.Main
 {
@@ -32,7 +33,10 @@ namespace Design.Main
             //BridgePatternMethods();
 
             //装饰者模式
-            DecoratorPatternMethods();
+            //DecoratorPatternMethods();
+
+            //组合模式
+            CompositePatternMethods();
             Console.ReadKey();
         }
 
@@ -143,6 +147,24 @@ namespace Design.Main
             var egg = new Egg(noodles);
             var lajiao = new LaJiao(egg);
             lajiao.AddSomeThing();
+        }
+
+        /// <summary>
+        /// 组合模式
+        /// </summary>
+        public static void CompositePatternMethods()
+        {
+            var mainFrames = new MainFrames("电脑主机");
+            Console.WriteLine("开始构建电脑主机");
+            var cpu = new CPU("CPU");
+            var mainBoard = new MainBoard("主板");
+            
+
+            mainFrames.Add(cpu);
+            mainFrames.Add(mainBoard);
+
+            mainFrames.Make();
+            Console.WriteLine("电脑主机构建完成");
         }
     }
 }
