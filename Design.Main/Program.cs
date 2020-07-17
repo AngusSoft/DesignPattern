@@ -7,6 +7,7 @@ using AdapterPattern;
 using BridgePattern;
 using DecoratorPattern;
 using CompositePattern;
+using FacadePattern;
 
 namespace Design.Main
 {
@@ -36,7 +37,10 @@ namespace Design.Main
             //DecoratorPatternMethods();
 
             //组合模式
-            CompositePatternMethods();
+            //CompositePatternMethods();
+
+            //外观模式
+            FacadePatternMethods();
             Console.ReadKey();
         }
 
@@ -165,6 +169,15 @@ namespace Design.Main
 
             mainFrames.Make();
             Console.WriteLine("电脑主机构建完成");
+        }
+
+        /// <summary>
+        /// 外观模式
+        /// </summary>
+        public static void FacadePatternMethods()
+        {
+            var facade = new Facade();
+            facade.GetUserWhitVehicleInfo();
         }
     }
 }
