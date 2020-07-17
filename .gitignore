@@ -162,3 +162,5 @@ CompositePattern/obj/Debug/netcoreapp3.1/CompositePattern.dll
 CompositePattern/obj/Debug/netcoreapp3.1/CompositePattern.pdb
 Design.Main/bin/Debug/netcoreapp3.1/CompositePattern.dll
 Design.Main/bin/Debug/netcoreapp3.1/CompositePattern.pdb
+FacadePattern/obj/Debug/netcoreapp3.1/FacadePattern.AssemblyInfo.cs
+FacadePattern/obj/Debug/netcoreapp3.1/FacadePattern.AssemblyInfoInputs.cache
