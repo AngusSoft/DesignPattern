@@ -5,17 +5,14 @@ using System.Text;
 namespace FactoryPattern
 {
     /// <summary>
-    /// 继承IGoods，方便转化
+    /// 抽象工厂类
     /// </summary>
-    public class Banana : IFruit
+    public interface IFactory
     {
         /// <summary>
-        /// 香蕉单价
+        /// 定义公共方法
         /// </summary>
         /// <returns></returns>
-        public decimal GetPrice()
-        {
-            return (decimal)1.2;
-        }
+        IFruitProduct CreateInstance();
     }
 }

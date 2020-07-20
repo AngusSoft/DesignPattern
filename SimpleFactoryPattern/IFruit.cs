@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FactoryPattern
+namespace SimpleFactoryPattern
 {
     /// <summary>
     /// 也可以定义成抽象类，看自己习惯

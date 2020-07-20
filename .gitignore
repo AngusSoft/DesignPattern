@@ -180,3 +180,12 @@ FacadePattern/obj/Debug/netcoreapp3.1/FacadePattern.pdb
 Design.Main/bin/Debug/netcoreapp3.1/FacadePattern.dll
 Design.Main/bin/Debug/netcoreapp3.1/FacadePattern.pdb
 BridgePattern/obj/Debug/netcoreapp3.1/BridgePattern.csprojAssemblyReference.cache
+SimpleFactoryPattern/obj/project.assets.json
+SimpleFactoryPattern/obj/SimpleFactoryPattern.csproj.nuget.cache
+SimpleFactoryPattern/obj/SimpleFactoryPattern.csproj.nuget.dgspec.json
+SimpleFactoryPattern/obj/SimpleFactoryPattern.csproj.nuget.g.props
+SimpleFactoryPattern/obj/SimpleFactoryPattern.csproj.nuget.g.targets
+SimpleFactoryPattern/obj/Debug/netcoreapp3.1/SimpleFactoryPattern.AssemblyInfo.cs
+SimpleFactoryPattern/obj/Debug/netcoreapp3.1/SimpleFactoryPattern.AssemblyInfoInputs.cache
+SimpleFactoryPattern/obj/Debug/netcoreapp3.1/SimpleFactoryPattern.assets.cache
+SimpleFactoryPattern/obj/Debug/netcoreapp3.1/SimpleFactoryPattern.csprojAssemblyReference.cache

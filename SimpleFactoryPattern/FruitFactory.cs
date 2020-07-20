@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FactoryPattern
+namespace SimpleFactoryPattern
 {
     /// <summary>
     /// 水果工厂类

@@ -8,6 +8,7 @@ using BridgePattern;
 using DecoratorPattern;
 using CompositePattern;
 using FacadePattern;
+using SimpleFactoryPattern;
 
 namespace Design.Main
 {
@@ -15,8 +16,11 @@ namespace Design.Main
     {
         static void Main(string[] args)
         {
+            //简单工厂模式
+            //SimpleFactoryPatternMethods(); 
+
             //工厂方法模式
-            //FactoryPatternMethods(); 
+            //FactoryPatternMethods();
 
             //抽象工厂模式
             //AbstructFactoryPatternMethods();
@@ -45,14 +49,24 @@ namespace Design.Main
         }
 
         /// <summary>
-        /// 工厂方法模式
+        /// 简单工厂模式
         /// </summary>
-        public static void FactoryPatternMethods()
+        public static void SimpleFactoryPatternMethods()
         {
             var apple = FruitFactory.CreateInstance("Apple");
             var banana = FruitFactory.CreateInstance("Banana");
             Console.WriteLine($"苹果单价是：{apple.GetPrice()}");
             Console.WriteLine($"香蕉单价是：{banana.GetPrice()}");
+        }
+
+        /// <summary>
+        /// 工厂方法模式
+        /// </summary>
+        public static void FactoryPatternMethods()
+        {
+            IFactory factory = new BJFruitFactory();
+            IFruitProduct fruitProduct = factory.CreateInstance();
+            fruitProduct.Make();
         }
 
         /// <summary>
