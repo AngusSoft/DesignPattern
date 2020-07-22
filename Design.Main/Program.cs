@@ -9,6 +9,7 @@ using DecoratorPattern;
 using CompositePattern;
 using FacadePattern;
 using SimpleFactoryPattern;
+using FlyweightPattern;
 
 namespace Design.Main
 {
@@ -44,7 +45,11 @@ namespace Design.Main
             //CompositePatternMethods();
 
             //外观模式
-            FacadePatternMethods();
+            //FacadePatternMethods();
+
+            //享元模式
+            FlyweightPatternMethods();
+
             Console.ReadKey();
         }
 
@@ -176,7 +181,7 @@ namespace Design.Main
             Console.WriteLine("开始构建电脑主机");
             var cpu = new CPU("CPU");
             var mainBoard = new MainBoard("主板");
-            
+
 
             mainFrames.Add(cpu);
             mainFrames.Add(mainBoard);
@@ -192,6 +197,28 @@ namespace Design.Main
         {
             var facade = new Facade();
             facade.GetUserWhitVehicleInfo();
+        }
+
+        /// <summary>
+        /// 享元模式
+        /// </summary>
+        public static void FlyweightPatternMethods()
+        {
+            //外部状态单价
+            double price = 0;
+            var factory = new CarFactory();
+
+            var baoMa = factory.GetCar("宝马");
+            price = 40;
+            baoMa.GetPrice(price);
+
+            var baoMaB = factory.GetCar("宝马");
+            price = 30;
+            baoMaB.GetPrice(price);
+
+            var benChi = factory.GetCar("奔驰");
+            price = 50;
+            benChi.GetPrice(price);
         }
     }
 }
