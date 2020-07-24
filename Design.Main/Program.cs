@@ -10,6 +10,7 @@ using CompositePattern;
 using FacadePattern;
 using SimpleFactoryPattern;
 using FlyweightPattern;
+using ProxyPattern;
 
 namespace Design.Main
 {
@@ -48,8 +49,10 @@ namespace Design.Main
             //FacadePatternMethods();
 
             //享元模式
-            FlyweightPatternMethods();
+            //FlyweightPatternMethods();
 
+            //代理模式
+            ProxyPatternMethods();
             Console.ReadKey();
         }
 
@@ -219,6 +222,15 @@ namespace Design.Main
             var benChi = factory.GetCar("奔驰");
             price = 50;
             benChi.GetPrice(price);
+        }
+
+        /// <summary>
+        /// 代理模式
+        /// </summary>
+        public static void ProxyPatternMethods()
+        {
+            IPerson person = new Son();
+            person.BuySoySauce();
         }
     }
 }
