@@ -18,6 +18,7 @@
     <ProjectReference Include="..\ProtoTypePattern\ProtoTypePattern.csproj" />
     <ProjectReference Include="..\ProxyPattern\ProxyPattern.csproj" />
     <ProjectReference Include="..\SimpleFactoryPattern\SimpleFactoryPattern.csproj" />
+    <ProjectReference Include="..\TemplateMethodPattern\TemplateMethodPattern.csproj" />
   </ItemGroup>
 
 </Project>

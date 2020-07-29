@@ -11,6 +11,7 @@ using FacadePattern;
 using SimpleFactoryPattern;
 using FlyweightPattern;
 using ProxyPattern;
+using TemplateMethodPattern;
 
 namespace Design.Main
 {
@@ -52,7 +53,10 @@ namespace Design.Main
             //FlyweightPatternMethods();
 
             //代理模式
-            ProxyPatternMethods();
+            //ProxyPatternMethods();
+
+            //模板方法模式
+            TemplateMethodPatternMethods();
             Console.ReadKey();
         }
 
@@ -231,6 +235,15 @@ namespace Design.Main
         {
             IPerson person = new Son();
             person.BuySoySauce();
+        }
+
+        /// <summary>
+        /// 模板方法模式
+        /// </summary>
+        public static void TemplateMethodPatternMethods()
+        {
+            Computer computer = new ASUS();
+            computer.Build();
         }
     }
 }

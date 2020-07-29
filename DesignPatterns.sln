@@ -25,11 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositePattern", "Composi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadePattern", "FacadePattern\FacadePattern.csproj", "{72DE9AAE-4BCF-4C5C-9445-08F025324A63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFactoryPattern", "SimpleFactoryPattern\SimpleFactoryPattern.csproj", "{CF6D3F20-3340-49E0-9DB3-C4252034588B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleFactoryPattern", "SimpleFactoryPattern\SimpleFactoryPattern.csproj", "{CF6D3F20-3340-49E0-9DB3-C4252034588B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightPattern", "FlyweightPattern\FlyweightPattern.csproj", "{52A6A8D4-87DE-4BD1-BAF8-FEC206569D98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyweightPattern", "FlyweightPattern\FlyweightPattern.csproj", "{52A6A8D4-87DE-4BD1-BAF8-FEC206569D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPattern", "ProxyPattern\ProxyPattern.csproj", "{BC3F0B3F-0E86-4779-93C3-9EE1D60623DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyPattern", "ProxyPattern\ProxyPattern.csproj", "{BC3F0B3F-0E86-4779-93C3-9EE1D60623DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethodPattern", "TemplateMethodPattern\TemplateMethodPattern.csproj", "{DC2AB96D-D158-4FD1-8476-2C6788803496}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{BC3F0B3F-0E86-4779-93C3-9EE1D60623DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC3F0B3F-0E86-4779-93C3-9EE1D60623DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC3F0B3F-0E86-4779-93C3-9EE1D60623DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2AB96D-D158-4FD1-8476-2C6788803496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2AB96D-D158-4FD1-8476-2C6788803496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2AB96D-D158-4FD1-8476-2C6788803496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2AB96D-D158-4FD1-8476-2C6788803496}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

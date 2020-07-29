@@ -21,6 +21,7 @@ namespace FlyweightPattern
         /// <returns></returns>
         public ICar GetCar(string carName)
         {
+            Dictionary<int, int> dic = new Dictionary<int, int>();
             var data = dataDic.GetOrAdd(carName, carName =>
             {
                 return new ConcreteCar(carName);
