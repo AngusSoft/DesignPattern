@@ -12,6 +12,7 @@ using SimpleFactoryPattern;
 using FlyweightPattern;
 using ProxyPattern;
 using TemplateMethodPattern;
+using CommandPattern;
 
 namespace Design.Main
 {
@@ -56,7 +57,10 @@ namespace Design.Main
             //ProxyPatternMethods();
 
             //模板方法模式
-            TemplateMethodPatternMethods();
+            //TemplateMethodPatternMethods();
+
+            //命令模式
+            CommandPatternMethods();
             Console.ReadKey();
         }
 
@@ -242,8 +246,24 @@ namespace Design.Main
         /// </summary>
         public static void TemplateMethodPatternMethods()
         {
-            Computer computer = new ASUS();
+            Computer computer = new ASUS(); 
             computer.Build();
+        }
+
+        /// <summary>
+        /// 命令模式
+        /// </summary>
+        public static void CommandPatternMethods()
+        {
+            TV tv = new TV();
+            TVOffCommand offCommand = new TVOffCommand(tv);
+            TVOnCommand onCommand = new TVOnCommand(tv);
+            Invoke invoke = new Invoke();
+            invoke.command = onCommand;
+            invoke.ExcuteCommand();
+
+            invoke.command = offCommand;
+            invoke.ExcuteCommand();
         }
     }
 }
