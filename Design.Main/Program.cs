@@ -13,6 +13,7 @@ using FlyweightPattern;
 using ProxyPattern;
 using TemplateMethodPattern;
 using CommandPattern;
+using IteratorPattern;
 
 namespace Design.Main
 {
@@ -60,7 +61,10 @@ namespace Design.Main
             //TemplateMethodPatternMethods();
 
             //命令模式
-            CommandPatternMethods();
+            //CommandPatternMethods();
+
+            //迭代器模式
+            IteratorPatternMethods();
             Console.ReadKey();
         }
 
@@ -264,6 +268,20 @@ namespace Design.Main
 
             invoke.command = offCommand;
             invoke.ExcuteCommand();
+        }
+
+        /// <summary>
+        /// 迭代器模式
+        /// </summary>
+        public static void IteratorPatternMethods()
+        {
+            ConcreteList concreteList = new ConcreteList();
+            var iterator = concreteList.GetIterator();
+            while(iterator.MoveNext())
+            {
+                Console.WriteLine(iterator.GetCurrent());
+                iterator.Next();
+            }
         }
     }
 }

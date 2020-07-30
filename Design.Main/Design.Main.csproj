@@ -16,6 +16,7 @@
     <ProjectReference Include="..\FacadePattern\FacadePattern.csproj" />
     <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj" />
     <ProjectReference Include="..\FlyweightPattern\FlyweightPattern.csproj" />
+    <ProjectReference Include="..\IteratorPattern\IteratorPattern.csproj" />
     <ProjectReference Include="..\ProtoTypePattern\ProtoTypePattern.csproj" />
     <ProjectReference Include="..\ProxyPattern\ProxyPattern.csproj" />
     <ProjectReference Include="..\SimpleFactoryPattern\SimpleFactoryPattern.csproj" />
