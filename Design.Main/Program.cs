@@ -14,6 +14,7 @@ using ProxyPattern;
 using TemplateMethodPattern;
 using CommandPattern;
 using IteratorPattern;
+using ObserverPattern;
 
 namespace Design.Main
 {
@@ -64,7 +65,10 @@ namespace Design.Main
             //CommandPatternMethods();
 
             //迭代器模式
-            IteratorPatternMethods();
+            //IteratorPatternMethods();
+
+            //观察者模式
+            ObserverPatternMethods();
             Console.ReadKey();
         }
 
@@ -282,6 +286,19 @@ namespace Design.Main
                 Console.WriteLine(iterator.GetCurrent());
                 iterator.Next();
             }
+        }
+
+        /// <summary>
+        /// 观察者模式
+        /// </summary>
+        public static void ObserverPatternMethods()
+        {
+            WeiXin weiXin = new Game("明天这款游戏有重大更新");
+
+            weiXin.AddObserver(new GameObserver("张三"));
+            weiXin.AddObserver(new GameObserver("李四"));
+
+            weiXin.NotificationMsg();
         }
     }
 }
