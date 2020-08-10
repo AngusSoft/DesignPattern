@@ -15,6 +15,7 @@ using TemplateMethodPattern;
 using CommandPattern;
 using IteratorPattern;
 using ObserverPattern;
+using MediatorPattern;
 
 namespace Design.Main
 {
@@ -68,7 +69,10 @@ namespace Design.Main
             //IteratorPatternMethods();
 
             //观察者模式
-            ObserverPatternMethods();
+            //ObserverPatternMethods();
+
+            //中介者模式
+            MediatorPatternMethods();
             Console.ReadKey();
         }
 
@@ -299,6 +303,18 @@ namespace Design.Main
             weiXin.AddObserver(new GameObserver("李四"));
 
             weiXin.NotificationMsg();
+        }
+
+        /// <summary>
+        /// 中介者模式
+        /// </summary>
+        public static void MediatorPatternMethods()
+        {
+            WoMan woMan = new WoMan("小花");
+            Man man = new Man("小明");
+            IMediator mediator = new ConcreteMediator(woMan, man);
+            woMan.TalkLove("我想找个男朋友", mediator);
+            man.TalkLove("我想找个女朋友", mediator);
         }
     }
 }
