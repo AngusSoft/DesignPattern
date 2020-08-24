@@ -339,3 +339,12 @@ StragetyPattern/obj/Debug/netcoreapp3.1/StragetyPattern.dll
 StragetyPattern/obj/Debug/netcoreapp3.1/StragetyPattern.pdb
 Design.Main/bin/Debug/netcoreapp3.1/StragetyPattern.dll
 Design.Main/bin/Debug/netcoreapp3.1/StragetyPattern.pdb
+StatePattern/obj/project.assets.json
+StatePattern/obj/StatePattern.csproj.nuget.cache
+StatePattern/obj/StatePattern.csproj.nuget.dgspec.json
+StatePattern/obj/StatePattern.csproj.nuget.g.props
+StatePattern/obj/StatePattern.csproj.nuget.g.targets
+StatePattern/obj/Debug/netcoreapp3.1/StatePattern.AssemblyInfo.cs
+StatePattern/obj/Debug/netcoreapp3.1/StatePattern.AssemblyInfoInputs.cache
+StatePattern/obj/Debug/netcoreapp3.1/StatePattern.assets.cache
+StatePattern/obj/Debug/netcoreapp3.1/StatePattern.csprojAssemblyReference.cache
