@@ -17,6 +17,7 @@ using IteratorPattern;
 using ObserverPattern;
 using MediatorPattern;
 using StatePattern;
+using StragetyPattern;
 
 namespace Design.Main
 {
@@ -76,7 +77,11 @@ namespace Design.Main
             //MediatorPatternMethods();
 
             //状态模式
-            StatePattern();
+            //StatePattern();
+
+            //策略模式
+            StragetyPattern();
+
             Console.ReadKey();
         }
 
@@ -332,6 +337,22 @@ namespace Design.Main
             gameMan.Win();
             gameMan.Win();
             gameMan.Lose();
+        }
+
+        /// <summary>
+        /// 策略模式
+        /// </summary>
+        public static void StragetyPattern()
+        {
+            int[] array = new int[] { 49, 5, 10, 99, 43, 3, 25, 28, 43, 47, 56, 1 };
+            var sortOperation = new SortOperation(new BubbleSort());
+            Console.WriteLine("冒泡排序结果：");
+            sortOperation.Sort(array);
+
+            array = new int[] { 49, 5, 10, 99, 43, 3, 25, 28, 43, 47, 56, 1 };
+            sortOperation = new SortOperation(new QuickSort());
+            Console.WriteLine("快速排序结果：");
+            sortOperation.Sort(array);
         }
     }
 }

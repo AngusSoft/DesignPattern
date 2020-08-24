@@ -23,6 +23,7 @@
     <ProjectReference Include="..\ProxyPattern\ProxyPattern.csproj" />
     <ProjectReference Include="..\SimpleFactoryPattern\SimpleFactoryPattern.csproj" />
     <ProjectReference Include="..\StatePattern\StatePattern.csproj" />
+    <ProjectReference Include="..\StragetyPattern\StragetyPattern.csproj" />
     <ProjectReference Include="..\TemplateMethodPattern\TemplateMethodPattern.csproj" />
   </ItemGroup>
 
