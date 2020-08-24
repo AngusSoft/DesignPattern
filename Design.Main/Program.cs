@@ -16,6 +16,7 @@ using CommandPattern;
 using IteratorPattern;
 using ObserverPattern;
 using MediatorPattern;
+using StatePattern;
 
 namespace Design.Main
 {
@@ -72,7 +73,10 @@ namespace Design.Main
             //ObserverPatternMethods();
 
             //中介者模式
-            MediatorPatternMethods();
+            //MediatorPatternMethods();
+
+            //状态模式
+            StatePattern();
             Console.ReadKey();
         }
 
@@ -315,6 +319,19 @@ namespace Design.Main
             IMediator mediator = new ConcreteMediator(woMan, man);
             woMan.TalkLove("我想找个男朋友", mediator);
             man.TalkLove("我想找个女朋友", mediator);
+        }
+
+        /// <summary>
+        /// 状态模式
+        /// </summary>
+        public static void StatePattern()
+        {
+            var gameMan = new GameMan();
+            gameMan.Win();
+            gameMan.Win();
+            gameMan.Win();
+            gameMan.Win();
+            gameMan.Lose();
         }
     }
 }
