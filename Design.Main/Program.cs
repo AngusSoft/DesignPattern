@@ -18,6 +18,7 @@ using ObserverPattern;
 using MediatorPattern;
 using StatePattern;
 using StragetyPattern;
+using ChainOfResponsibility;
 
 namespace Design.Main
 {
@@ -80,7 +81,10 @@ namespace Design.Main
             //StatePattern();
 
             //策略模式
-            StragetyPattern();
+            //StragetyPattern();
+
+            //责任链模式
+            ChainOfResponsibility();
 
             Console.ReadKey();
         }
@@ -353,6 +357,23 @@ namespace Design.Main
             sortOperation = new SortOperation(new QuickSort());
             Console.WriteLine("快速排序结果：");
             sortOperation.Sort(array);
+        }
+
+        /// <summary>
+        /// 责任链模式
+        /// </summary>
+        public static void ChainOfResponsibility()
+        {
+            var approver = new Manager("经理");
+            approver.NextApprover = new President("总经理");
+
+            Console.WriteLine("开始5000块钱的东西");
+            var request = new ApplyRequest(5000);
+            approver.Approve(request);
+
+            Console.WriteLine("开始审批20000块钱的东西");
+            request = new ApplyRequest(20000);
+            approver.Approve(request);
         }
     }
 }
