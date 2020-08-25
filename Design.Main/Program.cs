@@ -21,6 +21,7 @@ using StragetyPattern;
 using ChainOfResponsibility;
 using VistorPattern;
 using System.Collections.Generic;
+using MementoPattern;
 
 namespace Design.Main
 {
@@ -89,7 +90,10 @@ namespace Design.Main
             //ChainOfResponsibility();
 
             //访问者模式
-            VistorPattern();
+            //VistorPattern();
+
+            //备忘录模式
+            MementoPattern();
             Console.ReadKey();
         }
 
@@ -390,6 +394,27 @@ namespace Design.Main
             IDataStruct single = new VistorPattern.Single("赵六", "10");
             group.Accept(printVistor);
             single.Accept(printVistor);
+        }
+
+        /// <summary>
+        /// 备忘录模式
+        /// </summary>
+        public static void MementoPattern()
+        {
+            var originator = new Originator(new Student
+            {
+                Id = 10,
+                Name = "张三"
+            });
+            Console.WriteLine($"现在学生的名称是：{originator.GetStudentName()}");
+            var caretaker = new Caretaker();
+            caretaker.student = originator.CreateStudent();
+            Console.WriteLine($"备份对象：Id:{caretaker.student.Id}，Name:{caretaker.student.Name}");
+            originator.RemoveStudent();
+            Console.WriteLine($"移除对象");
+            Console.WriteLine($"当前学生的名称是：{originator.GetStudentName()}");
+            originator.RestoreStudent(caretaker.student);
+            Console.WriteLine($"还原之后学生的名称是：{originator.GetStudentName()}");
         }
     }
 }
