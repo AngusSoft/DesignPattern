@@ -19,6 +19,8 @@ using MediatorPattern;
 using StatePattern;
 using StragetyPattern;
 using ChainOfResponsibility;
+using VistorPattern;
+using System.Collections.Generic;
 
 namespace Design.Main
 {
@@ -84,8 +86,10 @@ namespace Design.Main
             //StragetyPattern();
 
             //责任链模式
-            ChainOfResponsibility();
+            //ChainOfResponsibility();
 
+            //访问者模式
+            VistorPattern();
             Console.ReadKey();
         }
 
@@ -374,6 +378,18 @@ namespace Design.Main
             Console.WriteLine("开始审批20000块钱的东西");
             request = new ApplyRequest(20000);
             approver.Approve(request);
+        }
+
+        /// <summary>
+        /// 访问者模式
+        /// </summary>
+        public static void VistorPattern()
+        {
+            IVistor printVistor = new PrintVisit();
+            IDataStruct group = new Group(new List<string> { "张三", "李四", "王五" });
+            IDataStruct single = new VistorPattern.Single("赵六", "10");
+            group.Accept(printVistor);
+            single.Accept(printVistor);
         }
     }
 }

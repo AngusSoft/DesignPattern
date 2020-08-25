@@ -26,6 +26,7 @@
     <ProjectReference Include="..\StatePattern\StatePattern.csproj" />
     <ProjectReference Include="..\StragetyPattern\StragetyPattern.csproj" />
     <ProjectReference Include="..\TemplateMethodPattern\TemplateMethodPattern.csproj" />
+    <ProjectReference Include="..\VistorPattern\VistorPattern.csproj" />
   </ItemGroup>
 
 </Project>
